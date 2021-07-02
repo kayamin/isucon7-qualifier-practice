@@ -73,12 +73,10 @@ query_cache_size        = 16M
 log_error = /var/log/mysql/error.log
 #
 # Here you can see queries with especially long duration
-
-# スロークエリのログ出力設定を追加
 slow_query_log = 1
-log_slow_queries = /var/log/mysql/mysql-slow.log
+slow_query_log_file = /var/log/mysql/mysql-slow2.log
 long_query_time = 0.1
-log-queries-not-using-indexes
+#log-queries-not-using-indexes
 
 
 # The following can be used as easy to replay backup logs or for replication.
