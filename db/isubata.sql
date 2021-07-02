@@ -14,6 +14,8 @@ CREATE TABLE image (
   data LONGBLOB
 ) Engine=InnoDB DEFAULT CHARSET=utf8mb4;
 
+ALTER TABLE ADD name_idx (name);
+
 CREATE TABLE channel (
   id BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY,
   name TEXT NOT NULL,
