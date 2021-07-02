@@ -386,7 +386,7 @@ func getMessage(c echo.Context) error {
 		return err
 	}
 
-	response := make([]map[string]interface{}, 0)
+	response := make([]map[string]interface{}, 0, len(messages))
 	for i := len(messages) - 1; i >= 0; i-- {
 		m := messages[i]
 		r, err := jsonifyMessage(m)
